@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1001,
+    "firstName": "John",
+    "lastName": "Doe",
+    "imageUrl": "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "emailId": "johndoe@gmail.com",
+    "phoneNumber": "9876543210",
+    "salary": 2000000,
+    "dateOfBirth": "23/03/2000",
+    "age": 24,
+    "address": "N/A"
+  },
+  {
+    "id": 1002,
+    "firstName": "Jane",
+    "lastName": "Smith",
+    "imageUrl": "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "emailId": "janesmith@gmail.com",
+    "phoneNumber": "9876543211",
+    "salary": 1800000,
+    "dateOfBirth": "12/08/1998",
+    "age": 25,
+    "address": "N/A"
+  },
+  {
+    "id": 1003,
+    "firstName": "Michael",
+    "lastName": "Johnson",
+    "imageUrl": "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "emailId": "michaeljohnson@gmail.com",
+    "phoneNumber": "9876543212",
+    "salary": 2200000,
+    "dateOfBirth": "05/01/1997",
+    "age": 27,
+    "address": "N/A"
+  },
+  {
+    "id": 1004,
+    "firstName": "Emily",
+    "lastName": "Davis",
+    "imageUrl": "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "emailId": "emilydavis@gmail.com",
+    "phoneNumber": "9876543213",
+    "salary": 1900000,
+    "dateOfBirth": "19/11/1999",
+    "age": 24,
+    "address": "N/A"
+  },
+  {
+    "id": 1005,
+    "firstName": "David",
+    "lastName": "Brown",
+    "imageUrl": "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "emailId": "davidbrown@gmail.com",
+    "phoneNumber": "9876543214",
+    "salary": 2500000,
+    "dateOfBirth": "30/06/1995",
+    "age": 29,
+    "address": "N/A"
+  },
+  {
+    "id": 1006,
+    "firstName": "Sophia",
+    "lastName": "Martinez",
+    "imageUrl": "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "emailId": "sophiamartinez@gmail.com",
+    "phoneNumber": "9876543215",
+    "salary": 2100000,
+    "dateOfBirth": "15/02/2001",
+    "age": 23,
+    "address": "N/A"
+  },
+  {
+    "id": 1007,
+    "firstName": "James",
+    "lastName": "Wilson",
+    "imageUrl": "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "emailId": "jameswilson@gmail.com",
+    "phoneNumber": "9876543216",
+    "salary": 2300000,
+    "dateOfBirth": "08/10/1996",
+    "age": 27,
+    "address": "N/A"
+  },
+  {
+    "id": 1008,
+    "firstName": "Olivia",
+    "lastName": "Garcia",
+    "imageUrl": "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "emailId": "oliviagarcia@gmail.com",
+    "phoneNumber": "9876543217",
+    "salary": 2400000,
+    "dateOfBirth": "22/04/1998",
+    "age": 26,
+    "address": "N/A"
+  },
+  {
+    "id": 1009,
+    "firstName": "William",
+    "lastName": "Lopez",
+    "imageUrl": "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "emailId": "williamlopez@gmail.com",
+    "phoneNumber": "9876543218",
+    "salary": 2000000,
+    "dateOfBirth": "17/07/1994",
+    "age": 30,
+    "address": "N/A"
+  },
+  {
+    "id": 1010,
+    "firstName": "Ava",
+    "lastName": "Harris",
+    "imageUrl": "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600",
+    "emailId": "avaharris@gmail.com",
+    "phoneNumber": "9876543219",
+    "salary": 2100000,
+    "dateOfBirth": "11/05/1999",
+    "age": 25,
+    "address": "N/A"
+  }
+]

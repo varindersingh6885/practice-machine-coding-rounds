@@ -1,3 +1,10 @@
+:root {
+  --btn: #dbdbdb;
+  --btn-hover: #cacaca;
+  --item-bg: #f0f0f0;
+  --modal-bg: rgba(141, 141, 141, 0.541);
+}
+
 .heading {
   text-align: center;
 }
@@ -12,7 +19,8 @@
   width: 30%;
   border: 1px solid;
   height: 450px;
-  padding: 5px 10px
+  padding: 5px 10px;
+  overflow: auto;
 }
 
 .employee--info {
@@ -23,4 +31,23 @@
 .employee--info__heading {
   text-align: center;
   border-bottom: 1px solid black;
+}
+
+.employee--list__employees {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee--list__employees__employee--record {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--item-bg);
+  margin: 5px 0;
+  padding: 5px 10px;
+  border-radius: 3px;
+}
+
+.employee--list__employees__employee--record:hover {
+  cursor: pointer;
+  background-color: var(--btn-hover);  
 }
