@@ -6,7 +6,10 @@
     <title>Employee Database Management</title>
   </head>
   <body>
-    <h2 class="heading">Employee Database Management</h2>
+    <div class="header">
+      <h2 class="header__heading">Employee Database Management</h2>
+      <button class="header__add--employee">Add Employee</button>
+    </div>
 
     <div class="app">
       <!-- Employee List -->
@@ -20,6 +23,55 @@
         <h3 class="employee--info__heading">Employee Information</h3>
         <div class="employee--info__view"></div>
       </div>
+    </div>
+
+    <!-- Add employee form -->
+    <div class="add--employee--modal">
+      <form class="add--employee--modal__employee--form">
+        <h4>Add Employee</h4>
+        <div class="add--employee--modal__employee--form__fields--container">
+          <div>
+            <input
+              type="text"
+              placeholder="FirstName"
+              name="firstName"
+              required
+            />
+            <input
+              type="text"
+              placeholder="LastName"
+              name="lastName"
+              required
+            />
+          </div>
+          <input
+            type="text"
+            placeholder="Image url (optional)"
+            name="imageUrl"
+          />
+          <input
+            type="number"
+            placeholder="Phone number"
+            name="phoneNumber"
+            required
+          />
+          <input type="text" placeholder="Address" name="address" required />
+          <input type="number" placeholder="Salary" name="salary" required />
+          <input
+            type="date"
+            placeholder="Date of birth"
+            name="dateOfBirth"
+            required
+            class="add--employee--modal__employee--form__fields--container__dob"
+          />
+
+          <input
+            type="submit"
+            value="Submit"
+            class="add--employee--modal__employee--form__fields--container__submit"
+          />
+        </div>
+      </form>
     </div>
 
     <link rel="stylesheet" href="./styles.css" />

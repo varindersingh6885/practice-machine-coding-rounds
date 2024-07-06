@@ -4,6 +4,15 @@ let selectedEmployee;
 
 const employeesList = document.querySelector(".employee--list__employees");
 const employeeDetails = document.querySelector(".employee--info__view");
+const addEmployeeModal = document.querySelector(".add--employee--modal");
+const addEmployeeButton = document.querySelector(".header__add--employee");
+const addEmployeeForm = document.querySelector(
+  ".add--employee--modal__employee--form"
+);
+
+const dobInput = document.querySelector(
+  ".add--employee--modal__employee--form__fields--container__dob"
+);
 
 (async function () {
   const employeesData = await fetch("./employees.json");
@@ -88,3 +97,58 @@ function renderSelectedEmployee() {
   employeeDetails.appendChild(employeePhoneNumber);
   employeeDetails.appendChild(employeeDateOfBirth);
 }
+
+// open add employee modal
+addEmployeeButton.addEventListener("click", () => {
+  addEmployeeModal.style.display = "flex";
+});
+
+// close add employee modal
+function closeAddEmployeeModal() {
+  addEmployeeModal.style.display = "none";
+  addEmployeeForm.reset();
+}
+
+// add event listener on modal to close it
+addEmployeeModal.addEventListener("click", (e) => {
+  if (e.target.className === addEmployeeModal.className) {
+    closeAddEmployeeModal();
+  }
+});
+
+// add employee
+addEmployeeForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const formData = new FormData(e.target);
+
+  const formEntries = [...formData.entries()];
+
+  const newEmployee = {
+    id: employees.length ? employees[employees.length - 1].id + 1 : 1001,
+  };
+  formEntries.forEach((formEntry) => {
+    newEmployee[formEntry[0]] = formEntry[1];
+  });
+
+  newEmployee.age =
+    new Date().getFullYear() - new Date(newEmployee.dateOfBirth).getFullYear();
+  newEmployee.imageUrl =
+    newEmployee.imageUrl ||
+    "https://images.pexels.com/photos/771742/pexels-photo-771742.jpeg?auto=compress&cs=tinysrgb&w=600";
+
+  employees = [...employees, newEmployee];
+
+  if (employees.length === 1) {
+    selectedEmployeeId = employees[0].id;
+    selectedEmployee = newEmployee;
+  }
+  renderEmployeeList();
+  renderSelectedEmployee();
+  closeAddEmployeeModal();
+});
+
+// apply max date on Date of birth input
+dobInput.max = `${new Date().getFullYear() - 18}-${new Date()
+  .toISOString()
+  .slice(5, 10)}`;
