@@ -3,6 +3,7 @@ let selectedEmployeeId;
 let selectedEmployee;
 
 const employeesList = document.querySelector(".employee--list__employees");
+const employeeDetails = document.querySelector(".employee--info__view");
 
 (async function () {
   const employeesData = await fetch("./employees.json");
@@ -13,6 +14,7 @@ const employeesList = document.querySelector(".employee--list__employees");
   selectedEmployeeId = employees?.[0].id;
 
   renderEmployeeList();
+  renderSelectedEmployee();
 })();
 
 function renderEmployeeList() {
@@ -37,15 +39,41 @@ function renderEmployeeList() {
 
     employeesList.appendChild(employeeRecord);
   });
+}
 
-  // select an employee record
-  employeesList.addEventListener("click", (e) => {
-    const tagName = e.target.tagName;
-    const recordId = +e.target.id;
+// select an employee record
+employeesList.addEventListener("click", (e) => {
+  const tagName = e.target.tagName;
+  const recordId = +e.target.id;
 
-    if (tagName === "SPAN" && recordId !== selectedEmployeeId) {
-      selectedEmployeeId = recordId;
-      renderEmployeeList();
-    }
-  });
+  if (tagName === "SPAN" && recordId !== selectedEmployeeId) {
+    selectedEmployeeId = recordId;
+    renderEmployeeList();
+    renderSelectedEmployee();
+  }
+});
+
+function renderSelectedEmployee() {
+  employeeDetails.innerHTML = "";
+  const employeeImage = document.createElement("img");
+  employeeImage.setAttribute("src", selectedEmployee.imageUrl);
+  employeeImage.classList.add("employee--info__view__image");
+
+  const employeeNameWithAge = document.createElement("h2");
+  employeeNameWithAge.innerHTML = `${selectedEmployee.firstName} ${selectedEmployee.lastName} (${selectedEmployee.age})`;
+
+  const employeeAddress = document.createElement("p");
+  employeeAddress.innerHTML = selectedEmployee.address;
+
+  const employeePhoneNumber = document.createElement("p");
+  employeePhoneNumber.innerHTML = `Phone number - ${selectedEmployee.phoneNumber}`;
+
+  const employeeDateOfBirth = document.createElement("p");
+  employeeDateOfBirth.innerHTML = `Date of birth - ${selectedEmployee.dateOfBirth}`;
+
+  employeeDetails.appendChild(employeeImage);
+  employeeDetails.appendChild(employeeNameWithAge);
+  employeeDetails.appendChild(employeeAddress);
+  employeeDetails.appendChild(employeePhoneNumber);
+  employeeDetails.appendChild(employeeDateOfBirth);
 }

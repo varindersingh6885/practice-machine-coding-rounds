@@ -52,3 +52,13 @@
   cursor: pointer;
   background-color: var(--btn-hover);
 }
+
+.employee--info__view {
+  text-align: center;
+}
+
+.employee--info__view__image {
+  height: 150px;
+  width: 150px;
+  border-radius: 100%;
+}
