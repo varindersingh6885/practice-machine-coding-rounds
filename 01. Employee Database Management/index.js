@@ -41,13 +41,22 @@ function renderEmployeeList() {
   });
 }
 
-// select an employee record
+// actions on employee record
 employeesList.addEventListener("click", (e) => {
   const tagName = e.target.tagName;
-  const recordId = +e.target.id;
+  const recordId = tagName === "SPAN" ? +e.target.id : +e.target.parentNode.id;
 
+  // select an employee
   if (tagName === "SPAN" && recordId !== selectedEmployeeId) {
     selectedEmployeeId = recordId;
+    renderEmployeeList();
+    renderSelectedEmployee();
+  }
+
+  // delete an employee
+  if (tagName === "I") {
+    employees = employees.filter((employee) => employee.id != recordId);
+    if (recordId === selectedEmployeeId) selectedEmployeeId = employees[0]?.id;
     renderEmployeeList();
     renderSelectedEmployee();
   }
@@ -55,6 +64,8 @@ employeesList.addEventListener("click", (e) => {
 
 function renderSelectedEmployee() {
   employeeDetails.innerHTML = "";
+  if (!selectedEmployeeId) return;
+
   const employeeImage = document.createElement("img");
   employeeImage.setAttribute("src", selectedEmployee.imageUrl);
   employeeImage.classList.add("employee--info__view__image");
