@@ -47,7 +47,8 @@
   border-radius: 3px;
 }
 
-.employee--list__employees__employee--record:hover {
+.employee--list__employees__employee--record:hover,
+.employee--list__employees__employee--selected {
   cursor: pointer;
-  background-color: var(--btn-hover);  
+  background-color: var(--btn-hover);
 }
