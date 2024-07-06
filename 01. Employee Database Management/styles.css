@@ -1,0 +1,26 @@
+.heading {
+  text-align: center;
+}
+
+.app {
+  display: flex;
+  padding: 7px;
+}
+
+.employee--list,
+.employee--info {
+  width: 30%;
+  border: 1px solid;
+  height: 450px;
+  padding: 5px 10px
+}
+
+.employee--info {
+  width: 70%;
+}
+
+.employee--list__heading,
+.employee--info__heading {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
