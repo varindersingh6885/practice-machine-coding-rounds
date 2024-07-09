@@ -63,7 +63,8 @@ body {
   border-radius: 4px;
 }
 
-.start {
+.start,
+.resume {
   background-color: green;
 }
 

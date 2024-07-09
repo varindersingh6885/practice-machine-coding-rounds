@@ -12,20 +12,39 @@
       <div class="app__input--container">
         <div>
           <p>Hours</p>
-          <input type="number" placeholder="00" name="hours" />
+          <input
+            type="number"
+            placeholder="00"
+            id="hours"
+            maxlength="2"
+            oninput="this.value = this.value.slice(0, this.maxLength)"
+          />
         </div>
         <div>
           <p>Minutes</p>
-          <input type="number" placeholder="00" name="minutes" />
+          <input
+            type="number"
+            placeholder="00"
+            id="minutes"
+            maxlength="2"
+            oninput="this.value = this.value.slice(0, this.maxLength)"
+          />
         </div>
         <div>
           <p>Seconds</p>
-          <input type="number" placeholder="00" name="seconds" />
+          <input
+            type="number"
+            placeholder="00"
+            id="seconds"
+            maxlength="2"
+            oninput="this.value = this.value.slice(0, this.maxLength)"
+          />
         </div>
       </div>
 
       <div class="app_actions--container">
         <button class="start">Start</button>
+        <button class="resume">Resume</button>
         <button class="pause">Pause</button>
         <button class="reset">Reset</button>
       </div>
