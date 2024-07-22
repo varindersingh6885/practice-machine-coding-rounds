@@ -1,0 +1,42 @@
+.app {
+  width: 80vw;
+  margin: 0 auto;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.input-container > label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.input-container > input {
+  padding: 10px 10px;
+}
+
+.input-container__range-values {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.button-container > button {
+  padding: 20px 35px;
+  outline: none;
+  background-color: gray;
+  color: white;
+  border: 1px gray;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.button-container > button.selected {
+  background-color: lightseagreen;
+}
